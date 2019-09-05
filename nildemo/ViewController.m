@@ -34,5 +34,14 @@
     
     NSArray *arr2 = [NSArray arrayWithObjects:@"1", nil,@"2", nil];
     NSLog(@"%@",arr2);
+    
+    NSMutableArray *arr3 = @[].mutableCopy;
+    [arr3 addObject:(id)kCFNull];
+    NSLog(@"%@",arr3);
+    
+    NSMutableDictionary *dic = @{}.mutableCopy;
+    [dic setObject:(id)kCFNull forKey:@"name"];
+    
+    NSLog(@"%@",dic);
 }
 @end
